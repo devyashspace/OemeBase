@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
+}
+
+html {
+  font-size: 100%; /* 1rem = 10px */
 }
 
 /* Global atrr */
@@ -29,35 +36,94 @@ body {
     display: grid;
 }
 
-.ob-gap-sm { gap: 5px; }
+.ob-gap-sm {
+    gap: 5px;
+}
 
 /* Global headings and paragrah */
+.ob-text-xxxl {
+    font-size: 2.25rem;
+}
+
 .ob-text-xxl {
-    font-size: 48px;
+    font-size: 1.875rem;
 }
 
 .ob-text-xl {
-    font-size: 36px;
+    font-size: 1.5rem;
 }
 
 .ob-text-lg {
-    font-size: 24px;
+    font-size: 1.25rem;
 }
 
 .ob-text-md {
-    font-size: 18px;
+    font-size: 0.875rem;
 }
 
 .ob-text-sm {
-    font-size: 14px;
+    font-size: 0.8125rem;
 }
 
-.ob-font-normal {
-    font-weight: normal;
+.ob-text-xxxl-resp {
+    font-size: 2.25rem;
 }
 
-.ob-font-bold {
-    font-weight: bold;
+.ob-text-xxl-resp {
+    font-size: 1.875rem;
+}
+
+.ob-text-xl-resp {
+    font-size: 1.5rem;
+}
+
+.ob-text-lg-resp {
+    font-size: 1.25rem;
+}
+
+.ob-text-md-resp {
+    font-size: 0.875rem;
+}
+
+.ob-text-sm-resp {
+    font-size: 0.8125rem;
+}
+
+.ob-font-500 {
+    font-weight: 500;
+}
+
+.ob-font-600 {
+    font-weight: 600;
+}
+
+.ob-font-700 {
+    font-weight: 700;
+}
+
+.ob-font-800 {
+    font-weight: 800;
+}
+
+/* Global font families */
+.open-sans-ob {
+    font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.oswald-ob {
+     font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.roboto-ob {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 /* Structure */
@@ -76,6 +142,10 @@ body {
 }
 
 .oeme-spacy-nav {
+    
+}
+
+.ob-spacy-nav {
     display: flex;
 }
 
@@ -100,20 +170,26 @@ body {
     padding: 50px 0px 0px 10px;
 }
 
+.spacy-nav-mid-resp {
+    display: none;
+    background-color: rgb(69, 69, 116);
+    padding: 50px 10px 0px 10px;
+}
+
 /* Logo Group */
-.ob-logo-flex-center{
+.ob-logo-flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ob-logo-flex-base{
+.ob-logo-flex-base {
     display: flex;
     justify-content: center;
     align-items: baseline;
 }
 
-.ob-logo-block-center{
+.ob-logo-block-center {
     display: grid;
     place-items: center;
 }
@@ -140,7 +216,7 @@ body {
 
 /* Helper Layout */
 .do-not-copy-1 {
-    width: 100%;
+    width: 90%;
     height: 100vh;
     display: flex;
     justify-content: center;

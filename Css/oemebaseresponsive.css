@@ -1,0 +1,123 @@
+@media (max-width:800px) {
+
+    /* Global elements */
+    .ob-wid-90 {
+        width: 96%;
+    }
+
+    /*Typography*/
+    .ob-text-xxxl {
+        font-size: 2rem;
+    }
+
+    .ob-text-xxl {
+        font-size: 1.5rem;
+    }
+
+    .ob-text-xl {
+        font-size: 1.45rem;
+    }
+
+    .ob-text-xxxl-resp {
+        font-size: 4.5vw;
+    }
+
+    .ob-text-xxl-resp {
+        font-size: 4vw;
+    }
+
+    .ob-text-xl-resp {
+        font-size: 3.5vw;
+    }
+
+    .spacy-nav-lft {
+    padding: 15px 10px 0px 0px;
+}
+
+ .spacy-nav-mid {
+    padding: 15px 10px 0px 0px;
+}
+
+ .spacy-nav-rgt {
+    padding: 15px 10px 0px 0px;
+}
+
+.ob-logo-img-xl {
+    height: 4.5vw;
+}
+}
+
+@media (max-width:600px) {
+
+    /*Typography*/
+    .ob-text-xxxl-resp {
+        font-size: 5.2vw;
+    }
+
+    .ob-text-xxl-resp {
+        font-size: 4.7vw;
+    }
+
+    .ob-text-xl-resp {
+        font-size: 4.2vw;
+    }
+
+    .ob-text-xxxl-resp {
+        font-size: 4.5vw;
+    }
+
+    .ob-text-xxl-resp {
+        font-size: 4vw;
+    }
+
+    .ob-text-xl-resp {
+        font-size: 3.5vw;
+    }
+
+    .ob-text-lg-resp {
+        font-size: 3.2vw;
+    }
+
+        .ob-logo-img-xl {
+        height: 25px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    /* Global elements */
+    .ob-wid-90 {
+        width: 95%;
+    }
+
+    /*Typography*/
+    .ob-text-xxxl-resp {
+        font-size: 21px;
+    }
+
+    .ob-text-xxl-resp {
+        font-size: 18px;
+    }
+
+    .ob-text-xl-resp {
+        font-size: 15px;
+    }
+
+    .ob-text-lg-resp {
+        font-size: 15px;
+    }
+
+    .spacy-nav-mid {
+    display: none;
+    justify-content: center;
+    background-color: rgb(69, 69, 116);
+    padding: 50px 10px 0px 10px;
+}
+
+.spacy-nav-mid-resp {
+    display: flex;
+    justify-content: center;
+    padding: 15px 10px 0px 10px;
+}
+}
