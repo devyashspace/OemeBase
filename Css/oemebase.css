@@ -6,154 +6,202 @@
     padding: 0px;
 }
 
+/* =========================
+   DESIGN TOKENS
+========================= */
+:root {
+    /* Backgrounds */
+    --ob-bg-primary: #f3f3f3;
+    --ob-bg-primary-hover: #dcdcdc;
+
+    --ob-bg-inverse: #000000;
+    --ob-bg-inverse-hover: #383838;
+
+    --ob-bg-critical: #c70000;
+    --ob-bg-critical-hover: #a00000;
+
+    --ob-bg-disabled: #d4d4d4;
+
+    --ob-main-bg: #e8e8e8;
+
+    --ob-bg-primary-card:rgb(255, 255, 255);
+
+    /* Text */
+    --ob-text-primary: #000000;
+    --ob-text-inverse: #ffffff;
+    --ob-text-disabled: #8b8b8b;
+
+    /* Borders */
+    --ob-border-muted: #b7b7b7;
+
+    /* Spacing */
+    --ob-space-sm: 5px;
+    --ob-space-md: 10px;
+    --ob-space-lg: 15px;
+    --ob-space-xl: 20px;
+    --ob-space-xxl: 25px;
+    --ob-space-xxxl: 30px;
+
+    /* Radius */
+    --ob-radius-full: 999px;
+    --ob-radius-sm: 5px;
+    --ob-radius-md: 10px;
+    --ob-radius-lg: 15px;
+    --ob-radius-xl: 20px;
+    --ob-radius-xxl: 25px;
+    --ob-radius-xxxl: 30px;
+}
+
+/* =========================
+   BASE
+========================= */
 html {
-  font-size: 100%; /* 1rem = 10px */
+    font-size: 100%;
 }
 
-/* Global atrr */
 body {
-    background-color: grey;
+    background-color: var(--ob-main-bg);
+    font-family: "Open Sans", sans-serif;
 }
 
-/* Global elements */
-.ob-wid-95 {
-    width: 95%;
-}
+/* =========================
+   UTILITIES
+========================= */
+.ob-flex { display: flex; }
+.ob-flex-1 { flex: 1; }
+.ob-grid { display: grid; }
 
-.ob-wid-90 {
-    width: 90%;
-}
+.ob-flex-hori-start {justify-content: flex-start;}
+.ob-flex-hori-center {justify-content: center;}
+.ob-flex-hori-end {justify-content: flex-end;}
 
-.ob-flex {
-    display: flex;
-}
+.ob-flex-vert-start {align-items: flex-start;}
+.ob-flex-vert-center {align-items: center;}
+.ob-flex-vert-end {align-items: flex-end;}
 
-.ob-flex-1 {
-    flex: 1;
-}
+.ob-txt-align-left {text-align: left;}
+.ob-txt-align-center {text-align: center;}
+.ob-txt-align-right {text-align: right;}
 
-.ob-block {
-    display: grid;
-}
+.ob-gap-sm { gap: var(--ob-space-sm); }
+.ob-gap-md { gap: var(--ob-space-md); }
+.ob-gap-lg { gap: var(--ob-space-lg); }
+.ob-gap-xl { gap: var(--ob-space-xl); }
+.ob-gap-xxl { gap: var(--ob-space-xxl); }
+.ob-gap-xxxl { gap: var(--ob-space-xxxl); }
 
-.ob-gap-sm {
-    gap: 5px;
-}
+.ob-mt-sm { margin-top: var(--ob-space-sm); }
+.ob-mt-md { margin-top: var(--ob-space-md); }
+.ob-mt-lg { margin-top: var(--ob-space-lg); }
+.ob-mt-xl { margin-top: var(--ob-space-xl); }
+.ob-mt-xxl { margin-top: var(--ob-space-xxl); }
+.ob-mt-xxxl { margin-top: var(--ob-space-xxxl); }
 
-/* Global headings and paragrah */
-.ob-text-xxxl {
-    font-size: 2.25rem;
-}
+.ob-mb-sm { margin-bottom: var(--ob-space-sm); }
+.ob-mb-md { margin-bottom: var(--ob-space-md); }
+.ob-mb-lg { margin-bottom: var(--ob-space-lg); }
+.ob-mb-xl { margin-bottom: var(--ob-space-xl); }
+.ob-mb-xxl { margin-bottom: var(--ob-space-xxl); }
+.ob-mb-xxxl { margin-bottom: var(--ob-space-xxxl); }
 
-.ob-text-xxl {
-    font-size: 1.875rem;
-}
+.ob-mr-sm { margin-right: var(--ob-space-sm); }
+.ob-mr-md { margin-right: var(--ob-space-md); }
+.ob-mr-lg { margin-right: var(--ob-space-lg); }
+.ob-mr-xl { margin-right: var(--ob-space-xl); }
+.ob-mr-xxl { margin-right: var(--ob-space-xxl); }
+.ob-mr-xxxl { margin-right: var(--ob-space-xxxl); }
 
-.ob-text-xl {
-    font-size: 1.5rem;
-}
+.ob-ml-sm { margin-left: var(--ob-space-sm); }
+.ob-ml-md { margin-left: var(--ob-space-md); }
+.ob-ml-lg { margin-left: var(--ob-space-lg); }
+.ob-ml-xl { margin-left: var(--ob-space-xl); }
+.ob-ml-xxl { margin-left: var(--ob-space-xxl); }
+.ob-ml-xxxl { margin-left: var(--ob-space-xxxl); }
 
-.ob-text-lg {
-    font-size: 1.25rem;
-}
 
-.ob-text-md {
-    font-size: 0.875rem;
-}
+.ob-wid-70 { width: 70%; }
+.ob-wid-75 { width: 75%; }
+.ob-wid-80 { width: 80%; }
+.ob-wid-85 { width: 85%; }
+.ob-wid-90 { width: 90%; }
+.ob-wid-95 { width: 95%; }
 
-.ob-text-sm {
-    font-size: 0.8125rem;
-}
+/* =========================
+   TYPOGRAPHY
+========================= */
+.ob-text-xxxl { font-size: 2.25rem; }
+.ob-text-xxl  { font-size: 1.875rem; }
+.ob-text-xl   { font-size: 1.5rem; }
+.ob-text-lg   { font-size: 1.25rem; }
+.ob-text-md   { font-size: 0.875rem; }
+.ob-text-sm   { font-size: 0.8125rem; }
 
-.ob-text-xxxl-resp {
-    font-size: 2.25rem;
-}
+.ob-text-xxxl-resp {font-size: 2.25rem;}
+.ob-text-xxl-resp {font-size: 1.875rem;}
+.ob-text-xl-resp {font-size: 1.5rem;}
+.ob-text-lg-resp {font-size: 1.25rem;}
+.ob-text-md-resp {font-size: 0.875rem;}
+.ob-text-sm-resp {font-size: 0.8125rem;}
 
-.ob-text-xxl-resp {
-    font-size: 1.875rem;
-}
+.ob-font-500 { font-weight: 500; }
+.ob-font-600 { font-weight: 600; }
+.ob-font-700 { font-weight: 700; }
+.ob-font-800 { font-weight: 800; }
 
-.ob-text-xl-resp {
-    font-size: 1.5rem;
-}
 
-.ob-text-lg-resp {
-    font-size: 1.25rem;
-}
 
-.ob-text-md-resp {
-    font-size: 0.875rem;
-}
-
-.ob-text-sm-resp {
-    font-size: 0.8125rem;
-}
-
-.ob-font-500 {
-    font-weight: 500;
-}
-
-.ob-font-600 {
-    font-weight: 600;
-}
-
-.ob-font-700 {
-    font-weight: 700;
-}
-
-.ob-font-800 {
-    font-weight: 800;
-}
-
-/* Global font families */
+/* =========================
+   FONT FAMILIES
+========================= */
 .open-sans-ob {
     font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .oswald-ob {
-     font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .roboto-ob {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
-/* Structure */
+/* =========================
+   STRUCTURE
+========================= */
 .oeme-container {
-    height: 500px;
+    min-height: 500px;
     background-color: aqua;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Navbar */
+/* =========================
+   NAVBAR
+========================= */
 /* Spacy Nav */
 .ob-nav-fixed {
     position: fixed;
     width: inherit;
 }
 
-.oeme-spacy-nav {
-    
-}
+.oeme-spacy-nav {}
 
-.ob-spacy-nav {
-    display: flex;
-}
+.ob-spacy-nav {display: flex;}
 
 .spacy-nav-lft {
     display: flex;
     justify-content: flex-start;
     background-color: blue;
     padding: 50px 10px 0px 0px;
+    align-items: center;
 }
 
 .spacy-nav-mid {
@@ -161,6 +209,7 @@ body {
     justify-content: center;
     background-color: rgb(69, 69, 116);
     padding: 50px 10px 0px 10px;
+    align-items: center;
 }
 
 .spacy-nav-rgt {
@@ -168,6 +217,7 @@ body {
     justify-content: flex-end;
     background-color: rgb(73, 164, 79);
     padding: 50px 0px 0px 10px;
+    align-items: center;
 }
 
 .spacy-nav-mid-resp {
@@ -176,7 +226,9 @@ body {
     padding: 50px 10px 0px 10px;
 }
 
-/* Logo Group */
+/* =========================
+   LOGO GROUP
+========================= */
 .ob-logo-flex-center {
     display: flex;
     justify-content: center;
@@ -194,27 +246,176 @@ body {
     place-items: center;
 }
 
-.ob-logo-img-xxl {
-    height: 48px;
+.ob-logo-img-xxl {height: 48px;}
+.ob-logo-img-xl {height: 36px;}
+.ob-logo-img-lg {height: 24px;}
+.ob-logo-img-md {height: 18px;}
+.ob-logo-img-sm {height: 14px;}
+
+/* =========================
+   BUTTONS
+========================= */
+/* Base */
+.ob-btn {
+    padding: var(--ob-space-md);
+    border-radius: var(--ob-radius-full);
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
 }
 
-.ob-logo-img-xl {
-    height: 36px;
+/* Size */
+.ob-btn-lg {
+    padding: var(--ob-space-lg);
+    font-size: 14px;
+    border-radius: var(--ob-radius-full);
+    cursor: pointer;
+    border: none;
 }
 
-.ob-logo-img-lg {
-    height: 24px;
+/* State */
+.ob-btn:disabled, .ob-btn-lg:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
-.ob-logo-img-md {
-    height: 18px;
+/* Variants */
+.ob-btn-primary {
+    background: var(--ob-bg-primary);
+    border: 1px solid var(--ob-bg-primary);
+    color: var(--ob-text-primary);
 }
 
-.ob-logo-img-sm {
-    height: 14px;
+.ob-btn-secondary {
+    background: var(--ob-bg-inverse);
+    border: 1px solid var(--ob-bg-inverse);
+    color: var(--ob-text-inverse);
 }
 
-/* Helper Layout */
+.ob-btn-trans-light {
+    background: transparent;
+    border: 1px solid var(--ob-bg-primary);
+    color: var(--ob-text-inverse);
+}
+
+.ob-btn-trans-dark {
+    background: transparent;
+    border: 1px solid var(--ob-bg-inverse);
+    color: var(--ob-text-primary);
+}
+
+.ob-btn-critical {
+    background: var(--ob-bg-critical);
+    border: 1px solid var(--ob-bg-critical);
+    color: var(--ob-text-inverse);
+}
+
+.ob-btn-primary:not(:disabled):hover {
+    background: var(--ob-bg-primary-hover);
+    border-color: var(--ob-bg-primary-hover);
+}
+
+.ob-btn-secondary:not(:disabled):hover {
+    background: var(--ob-bg-inverse-hover);
+    border-color: var(--ob-bg-inverse-hover);
+}
+
+.ob-btn-trans-light:not(:disabled):hover {
+    background: var(--ob-bg-primary);
+    color: var(--ob-text-primary);
+}
+
+.ob-btn-trans-dark:not(:disabled):hover {
+    background: var(--ob-bg-inverse);
+    color: var(--ob-text-inverse);
+}
+
+.ob-btn-critical:not(:disabled):hover {
+    background: var(--ob-bg-critical-hover);
+    border-color: var(--ob-bg-critical-hover);
+}
+
+
+
+/* Disabled Variants */
+.ob-btn-primary:disabled {
+    background: var(--ob-bg-disabled);
+    border-color: var(--ob-bg-disabled);
+    color: var(--ob-text-disabled);
+}
+
+.ob-btn-secondary:disabled {
+    background: var(--ob-border-muted);
+    border-color: var(--ob-border-muted);
+    color: var(--ob-text-inverse);
+}
+
+.ob-btn-trans-light:disabled,
+.ob-btn-trans-dark:disabled {
+    border-color: var(--ob-border-muted);
+    color: var(--ob-border-muted);
+}
+
+/* Modifier */
+.ob-btn-shadow {
+    box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.23);
+}
+
+/* Icon Button */
+.ob-btn-icon, .ob-btn-icon-lg {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.ob-btn-icon img {
+    height: 25px;
+}
+
+.ob-btn-icon-lg img{
+    height: 35px;
+}
+
+/* Button Group */
+.oeme-btn-grp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--ob-space-md);
+    width: fit-content;
+}
+
+/* =========================
+   CREATIVE CARD
+========================= */
+.oeme-creative-card{
+    min-height: 100px;
+    background-color: var(--ob-bg-primary-card);
+    border-radius: var(--ob-radius-md);
+    display: flex;
+    padding: var(--ob-space-lg);
+}
+
+.ob-creative-card-alpha img{
+    width: 60%;;
+}
+
+.ob-creative-card-alpha{
+    background-color: #ff777700;
+    display: flex;
+    flex: 1;
+}
+
+
+.ob-creative-card-beta{
+    background-color: #e0242400;
+    display: flex;
+    flex: 1;
+}
+
+/* =========================
+   HELPER
+========================= */
 .do-not-copy-1 {
     width: 90%;
     height: 100vh;
