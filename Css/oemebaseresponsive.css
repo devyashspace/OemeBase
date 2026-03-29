@@ -73,13 +73,44 @@
     }
 
     /*Creative Card*/
-    .oeme-creative-card {
+    .oeme-creative-bannar-card {
         display: block;
     }
 
     .ob-creative-card-alpha img {
         width: 300px;
     }
+
+    .ob-creative-table-top {
+        display: block;
+    }
+
+    .ob-creative-table-search {
+        width: unset;
+    }
+
+    .ob-creative-table-search input {
+        width: 100%;
+    }
+
+    .ob-creative-table-btns {
+        margin-top: 10px;
+    }
+
+    .ob-creative-table-actions {
+        margin-left: 0px;
+    }
+
+    .ob-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .ob-table {
+        min-width: max-content;
+        /* adjust based on columns */
+    }
+
+
 
 }
 
@@ -162,25 +193,37 @@
     }
 }
 
-@media (max-width:400px){
+@media (max-width:400px) {
     .ob-creative-card-alpha img {
         width: 70%;
     }
+
+    .ob-btn-sm {
+    font-size: 9px;
+    padding: 5px 6px 5px 6px;
 }
 
-@media (max-width:350px){
+.ob-btn-icon-sm img {
+    height: 13px;
+    padding: 5px;
+}
+}
+
+@media (max-width:350px) {
     .ob-creative-card-alpha img {
         width: 80%;
     }
 }
 
-@media (max-width:300px){
+@media (max-width:300px) {
     .ob-creative-card-alpha img {
         width: 85%;
     }
+
+    
 }
 
-@media (max-width:250px){
+@media (max-width:250px) {
     .ob-creative-card-alpha img {
         width: 90%;
     }
