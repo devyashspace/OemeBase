@@ -111,6 +111,51 @@ function initObSimpleActionToggle(tableId, rowClass, editBtnId, deleteBtnId, sel
 
 
 // ==============================
+// TABLE OTHER ACTIONS VISIBLE
+// ==============================
+
+function obInitTableToggles() {
+    const obFilterBtn = document.getElementById("ob-filter-btn");
+    const obSortBtn = document.getElementById("ob-sort-btn");
+
+    const obFilterBox = document.getElementById("ob-table-filter");
+    const obSortBox = document.getElementById("ob-table-sort");
+
+    if (!obFilterBtn || !obSortBtn || !obFilterBox || !obSortBox) return;
+
+    function obToggleExclusive(activeBox, otherBox) {
+        activeBox.classList.toggle("ob-open-box");
+        otherBox.classList.remove("ob-open-box");
+    }
+
+    function obToggleGroups(container, show) {
+        const groups = container.querySelectorAll(".ob-table-more-action-grp");
+
+        groups.forEach(el => {
+            el.classList.toggle("ob-show-more-actions", show);
+        });
+    }
+
+    obFilterBtn.addEventListener("click", () => {
+        const isOpen = !obFilterBox.classList.contains("ob-open-box");
+
+        obToggleExclusive(obFilterBox, obSortBox);
+
+        obToggleGroups(obFilterBox, isOpen);   // ✅ only filter
+        obToggleGroups(obSortBox, false);      // ✅ close sort groups
+    });
+
+    obSortBtn.addEventListener("click", () => {
+        const isOpen = !obSortBox.classList.contains("ob-open-box");
+
+        obToggleExclusive(obSortBox, obFilterBox);
+
+        obToggleGroups(obSortBox, isOpen);     // ✅ only sort
+        obToggleGroups(obFilterBox, false);    // ✅ close filter groups
+    });
+}
+
+// ==============================
 // INIT (SAFE)
 // ==============================
 
@@ -131,4 +176,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "ob-delete-action-1",
         "ob-select-all-1"
     );
+
+    obInitTableToggles();
 });

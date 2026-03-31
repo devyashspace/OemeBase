@@ -701,6 +701,36 @@ body {
     border-radius: 10px;
 }
 
+.ob-table-filter, .ob-table-sort{
+    width: 100%;
+    display: flex;
+    gap: var(--ob-space-sm);
+    margin-top: 5px;
+}
+
+#ob-table-filter,
+#ob-table-sort {
+    min-height: 0;
+    overflow: hidden;
+    transition: min-height 0.3s ease;
+}
+
+.ob-open-box {
+    min-height: 100px !important;
+}
+
+.ob-table-more-action-grp{
+    flex: 1;
+    min-height: 100%;
+    padding:var(--ob-space-md);
+    background-color: var(--ob-grey-two);
+    border-radius: var(--ob-radius-md);
+    display: none;
+}
+
+.ob-show-more-actions {
+    display: block;
+}
 
 
 
