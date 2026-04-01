@@ -156,6 +156,63 @@ function obInitTableToggles() {
 }
 
 // ==============================
+// CHAR COUNT
+// ==============================
+
+function obInitCharCount() {
+    const inputs = document.querySelectorAll('.ob-input-text');
+
+    inputs.forEach(input => {
+        const max = input.getAttribute('maxlength');
+        if (!max) return;
+
+        const wrapper = input.closest('.ob-input-single');
+        const counter = wrapper.querySelector('.ob-text-incount, .ob-text-outcount');
+
+        if (!counter) return;
+
+        // Set initial value
+        counter.textContent = max;
+
+        input.addEventListener('input', () => {
+            const remaining = max - input.value.length;
+            counter.textContent = remaining;
+        });
+    });
+}
+
+// ==============================
+// PASSWORD TOGGLE
+// ==============================
+
+
+function obInitPasswordToggle() {
+    const wrappers = document.querySelectorAll('.ob-input-password-plain');
+
+    wrappers.forEach(wrapper => {
+        const input = wrapper.querySelector('.ob-input-password');
+        const icon = wrapper.querySelector('img');
+
+        if (!input || !icon) return;
+
+        // ✅ Sync icon on load
+        icon.src = input.type === 'password'
+            ? '../../Img/Hidden.png'
+            : '../../Img/Show.png';
+
+        icon.addEventListener('click', () => {
+            const isPassword = input.type === 'password';
+
+            input.type = isPassword ? 'text' : 'password';
+
+            icon.src = isPassword 
+                ? '../../Img/Show.png' 
+                : '../../Img/Hidden.png';
+        });
+    });
+}
+
+// ==============================
 // INIT (SAFE)
 // ==============================
 
@@ -178,4 +235,8 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     obInitTableToggles();
+
+    obInitCharCount();
+
+    obInitPasswordToggle();
 });

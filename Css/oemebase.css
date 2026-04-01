@@ -314,6 +314,39 @@ body {
     width: 95%;
 }
 
+.ob-wid-100 {
+    width: 100%;
+}
+
+/*Border radius*/
+.ob-radius-full {
+    border-radius: var(--ob-radius-full);
+}
+
+.ob-radius-xxxl {
+    border-radius: var(--ob-radius-xxxl);
+}
+
+.ob-radius-xxl {
+    border-radius: var(--ob-radius-xxl);
+}
+
+.ob-radius-xl {
+    border-radius: var(--ob-radius-xl);
+}
+
+.ob-radius-lg {
+    border-radius: var(--ob-radius-lg);
+}
+
+.ob-radius-md {
+    border-radius: var(--ob-radius-md);
+}
+
+.ob-radius-sm {
+    border-radius: var(--ob-radius-sm);
+}
+
 /*Colors*/
 .ob-bg-primary {
     background-color: var(--ob-bg-primary);
@@ -329,6 +362,20 @@ body {
 
 .ob-bg-grey-two {
     background-color: var(--ob-grey-two);
+}
+
+.ob-bg-white-one {
+    background-color: var(--ob-white-one);
+}
+
+.ob-invi-style-1px {
+    border: 1px solid var(--ob-black-one);
+    background-color: transparent;
+}
+
+.ob-invi-style-2px {
+    border: 2px solid var(--ob-black-one);
+    background-color: transparent;
 }
 
 /* =========================
@@ -429,6 +476,7 @@ body {
     background-color: aqua;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: var(--ob-space-xl);
 }
 
 /* =========================
@@ -830,8 +878,6 @@ body {
     display: none;
 }
 
-
-
 .ob-creative-table-bottom {
     width: 100%;
     background-color: #7b7b7b00;
@@ -967,7 +1013,168 @@ body {
 /* =========================
    INPUTS
 ========================= */
+.oeme-inputs {
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.ob-input-single {
+    width: 100%;
+}
+
+.ob-input-double {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--ob-space-sm);
+}
+
+.ob-input-field:focus-within,
+.ob-input-text-outcount-field:focus-within {
+    border: 1px solid rgb(0, 0, 0);
+    transition: 0.1s;
+}
+
+.ob-input-text-plain,
+.ob-input-number-plain,
+.ob-input-select-plain {
+    width: 100%;
+
+}
+
+.ob-input-select-plain {
+    position: relative;
+}
+
+.ob-input-select-plain::after {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    /* 👈 adjust this */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 12px;
+}
+
+.ob-input-text-icon {
+    display: flex;
+    width: 100%;
+
+    align-items: center;
+    padding-right: var(--ob-space-lg);
+    box-sizing: border-box;
+}
+
+.ob-input-text-incount {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-right: var(--ob-space-lg);
+    box-sizing: border-box;
+}
+
+.ob-input-text-outcount {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.ob-input-text-outcount-field {
+    padding-right: var(--ob-space-lg);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ob-input-password-plain {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: var(--ob-space-lg);
+    box-sizing: border-box;
+}
+
+.ob-input-text-icon img,
+.ob-input-password-plain img {
+    height: 20px;
+    cursor: pointer;
+}
+
+.ob-input-text,
+.ob-input-number,
+.ob-input-password,
+.ob-input-select {
+    width: 100%;
+    border: 0px;
+    padding-top: var(--ob-space-md);
+    padding-bottom: var(--ob-space-md);
+    padding-left: var(--ob-space-lg);
+    padding-right: var(--ob-space-lg);
+    box-sizing: border-box;
+    background-color: transparent;
+    outline: none;
+}
+
+.ob-input-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.ob-input-sm {
+    height: 40px;
+}
+
+.ob-input-md {
+    height: 50px;
+}
+
+.ob-input-lg {
+    height: 60px;
+}
+
+.ob-text-incount {
+    color: var(--ob-black-one);
+    font-size: 15px;
+}
+
+.ob-text-outcount {
+    color: var(--ob-black-one);
+    border-radius: var(--ob-radius-full);
+    margin-left: var(--ob-space-sm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    font-size: 15px;
+}
+
+.ob-text-outcount-sm {
+    height: 40px;
+    width: 40px;
+}
+
+.ob-text-outcount-md {
+    height: 50px;
+    width: 50px;
+}
+
+.ob-text-outcount-lg {
+    height: 60px;
+    width: 60px;
+}
+
+.ob-input-helper {
+    padding-left: var(--ob-space-lg);
+    margin-top: 5px;
+}
+
+.ob-input-heading {
+    padding-left: var(--ob-space-lg);
+    margin-bottom: 5px;
+}
 
 
 /* =========================
